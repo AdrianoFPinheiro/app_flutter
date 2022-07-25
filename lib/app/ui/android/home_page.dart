@@ -37,15 +37,6 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 40.0),
               Text(
-                _homeController.user.name,
-                style: const TextStyle(
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Montserrat',
-                ),
-              ),
-              const SizedBox(height: 15.0),
-              Text(
                 '${_homeController.user.email}',
                 style: const TextStyle(
                   fontSize: 17.0,
