@@ -14,7 +14,6 @@ class LoginController extends GetxController {
   final TextEditingController nameTextController = TextEditingController();
   GetStorage box = GetStorage('login_firebase');
 
-
   @override
   void onReady() {
     isLogged();
