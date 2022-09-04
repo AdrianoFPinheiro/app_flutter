@@ -1,16 +1,15 @@
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-import '../data/model/user_model.dart';
-import '../ui/theme/app_theme.dart';
+import '../../../data/model/user_model.dart';
+import '../../../ui/theme/app_theme.dart';
 
 
-class HomeController extends GetxController {
+class DashboardController extends GetxController {
 
   final UserModel user = Get.arguments;
   GetStorage box = GetStorage('login_firebase');
   RxString txtThemeButtom = "TEXT_BT_THEME_DARK".obs;
-
 
   @override
   void onInit() {

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-import '../data/model/user_model.dart';
-import '../data/repository/login_repository.dart';
-import '../routes/app_routes.dart';
+import '../../../data/model/user_model.dart';
+import '../../../data/repository/login_repository.dart';
+import '../../../routes/app_routes.dart';
 
 
 class LoginController extends GetxController {
@@ -28,7 +28,7 @@ class LoginController extends GetxController {
         name: box.read("auth")["name"],
         urlimage: box.read("auth")["urlimage"]
       );
-      Get.offAllNamed(Routes.HOME, arguments: user);
+      Get.offAllNamed(Routes.DASHBOARD, arguments: user);
     }
   }
 
@@ -40,7 +40,7 @@ class LoginController extends GetxController {
         nameTextController.text)) as UserModel;
 
     box.write("auth", user);
-    Get.offAllNamed(Routes.HOME, arguments: user);
+    Get.offAllNamed(Routes.DASHBOARD, arguments: user);
   }
 
   void login() async {
@@ -49,7 +49,7 @@ class LoginController extends GetxController {
         emailTextController.text, passwordTextController.text)) as UserModel;
 
     box.write("auth", user);
-    Get.offAllNamed(Routes.HOME, arguments: user);
+    Get.offAllNamed(Routes.DASHBOARD, arguments: user);
   }
 
   void logout(){

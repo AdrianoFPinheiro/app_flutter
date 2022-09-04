@@ -1,21 +1,25 @@
+
+import 'package:app_flutter/app/modules/login/controllers/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../controller/home_controller.dart';
-import '../../controller/login_controller.dart';
-import '../../routes/app_routes.dart';
+import '../../../routes/app_routes.dart';
+import '../controllers/dashboard_controller.dart';
 
 
-class HomePage extends StatelessWidget {
-  final HomeController _homeController = Get.find<HomeController>();
+class DashboardPage extends StatelessWidget {
+  final DashboardController _homeController = Get.put(DashboardController());
+  TextEditingController? controller;
 
-  HomePage({Key? key}) : super(key: key);
+  DashboardPage({Key? key, this.controller}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("TITLE_HOME_PAGE".tr),
         centerTitle: true,
+        actions: [
+          IconButton(onPressed: (){}, icon: const Icon(Icons.add))
+        ],
       ),
       body: Stack(
         children: <Widget>[
@@ -129,6 +133,26 @@ class HomePage extends StatelessWidget {
                               fontFamily: 'Montserrat',
                             ),
                           ),
+
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 18.0,),
+                  SizedBox(
+                    height: 30.0,
+                    width: 130.0,
+                    child: RaisedButton(
+                      onPressed: () {
+                        Get.toNamed(Routes.HOME);
+                      },
+                      child: const Center(
+                        child:Text(
+                          "Banco de dados",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Montserrat',
+                          ),
+                        ),
 
                       ),
                     ),

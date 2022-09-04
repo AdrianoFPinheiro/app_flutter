@@ -1,10 +1,9 @@
 import 'dart:async';
 
-import 'package:app_flutter/app/ui/android/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../routes/app_routes.dart';
+import '../../../routes/app_routes.dart';
 
 class SplashPage extends StatefulWidget {
   SplashPage({Key? key}) : super(key: key);

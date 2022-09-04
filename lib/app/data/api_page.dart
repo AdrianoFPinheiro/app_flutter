@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
-
-import '../../controller/product_controller.dart';
-import '../widget/product_tile.dart';
+import '../modules/dashboard/controllers/product_controller.dart';
+import '../ui/widget/product_tile.dart';
 
 class ApiPage extends StatelessWidget {
   final ProductController productController = Get.put(ProductController());

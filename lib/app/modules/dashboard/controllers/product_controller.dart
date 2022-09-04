@@ -1,7 +1,7 @@
 import 'package:get/state_manager.dart';
 
-import '../data/model/product.dart';
-import '../data/provider/remote_services.dart';
+import '../../../data/model/product.dart';
+import '../../../data/provider/remote_services.dart';
 
 
 class ProductController extends GetxController {

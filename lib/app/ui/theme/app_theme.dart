@@ -6,17 +6,17 @@ final ThemeData appThemeData = ThemeData(
   primaryColor: Colors.cyan,
   buttonColor: Colors.cyan,
   brightness: Brightness.light,
-  accentColor: Colors.cyan[600],
+  accentColor: Colors.cyan,
   appBarTheme: const AppBarTheme(
     color: Colors.black,
   ),
 );
 
 final ThemeData appThemeDataDark = ThemeData(
-  primaryColor: Colors.black,
+  primaryColor: Colors.cyan,
   buttonColor: Colors.black,
   brightness: Brightness.dark,
-  accentColor: Colors.cyan[600],
+  accentColor: Colors.cyan,
   appBarTheme: const AppBarTheme(
     color: Colors.black,
   ),
